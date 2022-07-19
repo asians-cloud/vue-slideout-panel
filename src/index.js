@@ -10,10 +10,10 @@ if (typeof window !== 'undefined' && window.Vue) {
   window.Vue.use({
     install(NewVue) {
       NewVue.component('slideout-panel', VueSlideoutPanel);
-      NewVue.prototype.$showPanel = vueSlideoutPanelService.showPanel;
-      NewVue.prototype.$showPanelStack = vueSlideoutPanelService.showPanelStack;
-      NewVue.prototype.$hideAllPanels = vueSlideoutPanelService.hideAllPanels;
-      NewVue.prototype.$setPanelDefaults =
+      NewVue.config.globalProperties.$showPanel = vueSlideoutPanelService.showPanel;
+      NewVue.config.globalProperties.$showPanelStack = vueSlideoutPanelService.showPanelStack;
+      NewVue.config.globalProperties.$hideAllPanels = vueSlideoutPanelService.hideAllPanels;
+      NewVue.config.globalProperties.$setPanelDefaults =
         vueSlideoutPanelService.setPanelDefaults;
     }
   });
@@ -24,10 +24,10 @@ if (typeof window !== 'undefined' && window.Vue) {
 export default {
   install: function(NewVue) {
     NewVue.component('slideout-panel', VueSlideoutPanel);
-    NewVue.prototype.$showPanel = vueSlideoutPanelService.showPanel;
-    NewVue.prototype.$showPanelStack = vueSlideoutPanelService.showPanelStack;
-    NewVue.prototype.$hideAllPanels = vueSlideoutPanelService.hideAllPanels;
-    NewVue.prototype.$setPanelDefaults =
+    NewVue.config.globalProperties.$showPanel = vueSlideoutPanelService.showPanel;
+    NewVue.config.globalProperties.$showPanelStack = vueSlideoutPanelService.showPanelStack;
+    NewVue.config.globalProperties.$hideAllPanels = vueSlideoutPanelService.hideAllPanels;
+    NewVue.config.globalProperties.$setPanelDefaults =
       vueSlideoutPanelService.setPanelDefaults;
   },
   VueSlideoutPanel,
